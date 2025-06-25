@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    image: quiz-knit-api
+    ports:
+      - "3000:3000/tcp"
+    environment:
+      - PORT=${PORT}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - QUIZKNIT_CLIENT_URL=${QUIZKNIT_CLIENT_URL}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
+      - BETTER_AUTH_URL=${BETTER_AUTH_URL}
+      - MONGODB_URL=${MONGODB_URL}
