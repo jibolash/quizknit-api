@@ -20,7 +20,7 @@ Backend for QuizKnit, a web application that generates quizzes based on user pro
    ```bash
    npm install
    ```
-3. Create a .env file using the .sample.env file in the repo as a template, and add required environment variables. At a bare minimum, you will need an OPENAI_API_KEY to generate a quiz. You will also need a mongodb url to pass to MONGODB_URL to save and fetch quizzes and Google clientId and client secret for google social login. You will need to create a project in Google cloud console, pleas see the better-auth docs for Google social sign on [here](https://www.better-auth.com/docs/authentication/google) for details if you are not familiar with this process. This project uses better-auth for authentication, add a better-auth secret, see documentation [here](https://www.better-auth.com/docs/reference/options#secret) on how to generate one
+3. Create a .env file using the .sample.env file in the repo as a template, and add required environment variables. At a bare minimum, you will need an OPENAI_API_KEY to generate a quiz. You will also need a mongodb url to pass to MONGODB_URL to save and fetch quizzes. This project uses better-auth for authentication, so add a better-auth secret, see documentation [here](https://www.better-auth.com/docs/reference/options#secret). You will also need a Google clientId and secret for google social login. You will need to create a project in Google cloud console, please see the better-auth docs for Google social sign on [here](https://www.better-auth.com/docs/authentication/google) for details if you are not familiar with this process.
 4. Start the server
    ```bash
    npm run dev
