@@ -40,7 +40,7 @@ app.use(
 );
 
 app.get("/api", (req, res) => {
-  res.send("Lift Tracker API");
+  res.send("Quiz Knit API");
 });
 
 app.use("/api/quiz", quizRouter);
