@@ -24,6 +24,9 @@ export const auth = betterAuth({
         defaultValue: "",
       },
     },
+    deleteUser: {
+      enabled: true,
+    },
   },
   database: mongodbAdapter(db),
   emailAndPassword: {
@@ -32,6 +35,7 @@ export const auth = betterAuth({
   trustedOrigins: [process.env.QUIZKNIT_CLIENT_URL],
   socialProviders: {
     google: {
+      prompt: "select_account",
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     },
