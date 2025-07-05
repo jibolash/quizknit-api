@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import Flashcard from "../models/Flashcard.model";
+import Flashcard from "../models/flashcard.model";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
