@@ -55,7 +55,6 @@ quizRouter.get("/:quizId", async (request: Request, response: Response) => {
   const quizId: string = request.params.quizId;
   try {
     const quiz = await QuizService.getQuizById(quizId);
-    console.log("quiz", quiz);
     return response.status(200).json(quiz);
   } catch (error: any) {
     return response.status(500).json(error.message);

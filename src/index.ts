@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 import cookieSession from "cookie-session";
 import { toNodeHandler } from "better-auth/node";
 import { auth } from "./lib/auth";
+import { flashcardRouter } from "./quizknit/flashcard.router";
 
 mongoose
   .connect(process.env.MONGODB_URL)
@@ -44,6 +45,7 @@ app.get("/api", (req, res) => {
 });
 
 app.use("/api/quiz", quizRouter);
+app.use("/api/flashcards", flashcardRouter);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
